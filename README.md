@@ -3,9 +3,13 @@
 ✎ Neste Repositorio Irá Conter Todos Auto Farm Para o Game Tribal Wars Ⓐ
 
 ✪ Auto Farm Oficial      Modelo  ✔ A - B - C    2012/1®©
+
 ✪ Auto Farm Dry-Seco     Modelo  ✔ A - B - C    2013/2®©
+
 ✪ Auto Farm LessDry      Modelo  ✔ Mult-opções  2016/2®©
+
 ✪ Auto Farm Revolution   Modelo  ✔ Mult-opcões  2017/1®©  Em Manutenção
+
 ✪ Auto Farm Innovation   Modelo  ✔ Mult-opcões  2018/1®©  Em Confecção
 
 
