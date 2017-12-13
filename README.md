@@ -1,4 +1,4 @@
-# _ＡＵＴＯ ＦＡＲＭＳ
+# ＡＵＴＯ ＦＡＲＭＳ-_A_-
 
 ✎ Neste Repositorio Irá Conter Todos Auto Farm Para o Game Tribal Wars Ⓐ
 
@@ -22,7 +22,7 @@
 
 # ► ＡＵＴＯ ＦＡＲＭ ＯＦＩＣＩＡＬ
 
-- Modelo Inicial de Auto Farm iniciado 6 meses após existencia do assistente de saque, com opções divisorias de A - B - C, Este modelo passou por 6 atualizações ao longo dos anos (atualizações essas, feitas por inumeras pessoas, a nivel internacional)
+ "Modelo Inicial de Auto Farm iniciado 6 meses após existencia do assistente de saque, com opções divisorias de A - B - C, Este modelo passou por 6 atualizações ao longo dos anos (atualizações essas, feitas por inumeras pessoas, a nivel internacional)"
 
 # ► ＡＵＴＯ ＦＡＲＭ ＤＲＹ-ＳＥＣＯ 
 
