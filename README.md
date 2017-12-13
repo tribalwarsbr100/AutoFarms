@@ -1,4 +1,4 @@
-# _ＡＵＴＯ ＦＡＲＭＳ_
+# _ＡＵＴＯ ＦＡＲＭＳ
 
 ✎ Neste Repositorio Irá Conter Todos Auto Farm Para o Game Tribal Wars Ⓐ
 
@@ -18,7 +18,7 @@
 
 # • ＡＳＳＩＳＴＥＮＴＥ ＤＥ ＳＡＱＵＥ 
 
-* Que foi implantado em 2011 em todos serven, pelo modelo de gerente de conta, já existente na epoca. Logo após assistente de saque, na epocá conhecido como assitente de fazenda, pois na tradução do até então original tw alemão, para o idioma português, ficava como "Assistente de Fazenda" , mas alguns meses após dado o nome de Assistente de Saque, conforme conhecido no servidor brasileiro BR, e assim aguns meses depois surgiu o proprio assistente de saque independente do gerente de conta, para assim tornar essa ferramenta disponivel ao demais publico do jogo, por um valor acessivel de pontos premium, pois anteriormente ninguem usava gerente de conta, era algo inutilizavel devido está agregado ao gerente de conta, que era bem mais caro. Assim surgindo em forma independente do modo que conhecemos hoje., *
+* Que foi implantado em 2011 em todos serven, pelo modelo de gerente de conta, já existente na epoca. Logo após assistente de saque, na epocá conhecido como assitente de fazenda, pois na tradução do até então original tw alemão, para o idioma português, ficava como "Assistente de Fazenda" , mas alguns meses após dado o nome de Assistente de Saque, conforme conhecido no servidor brasileiro BR, e assim aguns meses depois surgiu o proprio assistente de saque independente do gerente de conta, para assim tornar essa ferramenta disponivel ao demais publico do jogo, por um valor acessivel de pontos premium, pois anteriormente ninguem usava gerente de conta, era algo inutilizavel devido está agregado ao gerente de conta, que era bem mais caro. Assim surgindo em forma independente do modo que conhecemos hoje., 
 
 # ► ＡＵＴＯ ＦＡＲＭ ＯＦＩＣＩＡＬ
 
@@ -38,7 +38,7 @@
 
 # ► ＡＵＴＯ ＦＡＲＭ ＲＥＶＯＬＵＴＩＯＮ  
 
-$ Modelo de auto farm indenpendente com funcionalidades revolucionarias, com painel pequeno e facilitado pra configurar velocidade de farm, controlar troca de aldeias, e com opção de burlar sistema de Anti bot do game, (Modelo em correção, manutenção)
+ Modelo de auto farm indenpendente com funcionalidades revolucionarias, com painel pequeno e facilitado pra configurar velocidade de farm, controlar troca de aldeias, e com opção de burlar sistema de Anti bot do game, (Modelo em correção, manutenção)
 
 # ► ＡＵＴＯ ＦＡＲＭ ＩＮＮＯＶＡＴＩＯＮ 
 
