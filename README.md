@@ -16,7 +16,7 @@
 
 
 
-• Assistente de saque 
+#• Assistente de saque 
 
 Que foi implantado em 2011 em todos serven, pelo modelo de gerente de conta, já existente na epoca. Logo após assistente de saque, na epocá conhecido como assitente de fazenda, pois na tradução do até então original tw alemão, para o idioma português, ficava como "Assistente de Fazenda" , mas alguns meses após dado o nome de Assistente de Saque, conforme conhecido no servidor brasileiro BR, e assim aguns meses depois surgiu o proprio assistente de saque independente do gerente de conta, para assim tornar essa ferramenta disponivel ao demais publico do jogo, por um valor acessivel de pontos premium, pois anteriormente ninguem usava gerente de conta, era algo inutilizavel devido está agregado ao gerente de conta, que era bem mais caro. Assim surgindo em forma independente do modo que conhecemos hoje., 
 
