@@ -1,3 +1,4 @@
+<img align="right" src="https://docs-assets.developer.apple.com/turicreate/turi-dog.svg" alt="Turi Create" width="100">
 [ＡＵＴＯ ＦＡＲＭ](https://www.youtube.com/c/TW100TRIBALWARS)
 =============
 
@@ -32,11 +33,11 @@
 
 ### ► ＡＵＴＯ ＦＡＲＭ ＬＥＳＳＤＲＹ
 
-```//Modelo de Farm baseado no modelo anterior conhecido como (Dry Seco), mas o modelo Less Dry e como diz o nome, traduzido significa (Menos Seco), ou seja, esse modelo foi adicionado um painel css com opções A - B - C Imbutida, todas em 1 só script, modelo e uma melhoria imensa dos auto farm descrito acima. mas conforme segue a funcionalidade Dry de não ser indentificavel no sistema de bot., devido a isso modelo Lessdry , também não atualiza pagina, nem troca de aldeia, apenas veio mais compacto, mais bonito aos olhos internamente e externamente;```
+```Modelo de Farm baseado no modelo anterior conhecido como (Dry Seco), mas o modelo Less Dry e como diz o nome, traduzido significa (Menos Seco), ou seja, esse modelo foi adicionado um painel css com opções A - B - C Imbutida, todas em 1 só script, modelo e uma melhoria imensa dos auto farm descrito acima. mas conforme segue a funcionalidade Dry de não ser indentificavel no sistema de bot., devido a isso modelo Lessdry , também não atualiza pagina, nem troca de aldeia, apenas veio mais compacto, mais bonito aos olhos internamente e externamente;```
 
 ### ► ＡＵＴＯ ＦＡＲＭ ＤＲＹ ＥＶＯＬＵＴＩＯＮ ＭＡＰ
 
-```//Modelo de Auto Farm Baseado nos modelos Dry-Seco + LessDry, assim reunindo a sofistificação do antigo com o novo, trazendo novidades, como farm no mapa, ou seja opção de farmar facilitadamente no mapa com apenas um clique, além de mostrar quais aldeias estão sendo farmadas no mapa, e incluindo opção LessDry no assistente de saque.```
+```Modelo de Auto Farm Baseado nos modelos Dry-Seco + LessDry, assim reunindo a sofistificação do antigo com o novo, trazendo novidades, como farm no mapa, ou seja opção de farmar facilitadamente no mapa com apenas um clique, além de mostrar quais aldeias estão sendo farmadas no mapa, e incluindo opção LessDry no assistente de saque.```
 
 ### ► ＡＵＴＯ ＦＡＲＭ ＲＥＶＯＬＵＴＩＯＮ  
 
