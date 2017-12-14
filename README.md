@@ -1,4 +1,4 @@
-# ＡＵＴＯ ＦＡＲＭＳ-_A_-
+# -_ＡＵＴＯ ＦＡＲＭ_-
 
 ✎ Neste Repositorio Irá Conter Todos Auto Farm Para o Game Tribal Wars Ⓐ
 
