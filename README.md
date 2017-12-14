@@ -1,6 +1,7 @@
-<img align="right" src="https://docs-assets.developer.apple.com/turicreate/turi-dog.svg" alt="Turi Create" width="100">
 [ＡＵＴＯ ＦＡＲＭ](https://www.youtube.com/c/TW100TRIBALWARS)
 =============
+<img align="right" src="https://docs-assets.developer.apple.com/turicreate/turi-dog.svg" alt="Turi Create" width="100">
+
 
 
 ✎ Neste Repositorio Irá Conter Todos Auto Farm Para o Game Tribal Wars Ⓐ
