@@ -14,9 +14,13 @@
 
 ✪ Auto Farm Dry Evolution Map    Modelo  ✔ Mult-opções  2017/1®©
 
+✪ Auto Farm Diversos             Modelo  ✔ Diversos Autores  2005/2017®©  
+
 ✪ Auto Farm Revolution           Modelo  ✔ Mult-opcões  2017/2®©  Em Manutenção
 
 ✪ Auto Farm Innovation           Modelo  ✔ Mult-opcões  2018/1®©  Em Confecção
+
+
 
 
 
@@ -47,5 +51,10 @@
 ### ► ＡＵＴＯ ＦＡＲＭ ＩＮＮＯＶＡＴＩＯＮ 
 
 ```Modelo de auto farm indenpendente, como o proprio nome diz, esse aqui e o carro chefe, dos auto farm, esse daqui e o modelo final, totalmente inovador, com opções de catapultagem automaticas, com opções de arietagem automaticas, com opções de cultivos de aldeias, ele irá catapultar todas aldeias barbaras catalogadas no assistente de saque, e assim irá catapultar edificios desnecessarios, além do modelo de farm totalmente configuravel, como tempo de troca de aldeias, tempo de atualização de pagina, pausas entre os ataques, para assim evitar sistema de controle de bot do game, enfim diversas funções, (Em Confeccção)```
+
+### ► ＡＵＴＯ ＦＡＲＭ ＤＩＶＥＲＳＯＳ
+
+```Modelo de auto farm de diversos autores, diversas nacionalidades, com diversas funções, cada um com sua peculiaridade, e de todas coletanêas de farm que tenho, esse e o meu acervo de maior importancia, pois atravez desses diversos conteudos, que consigo está criando melhoria para os meus proprios conteudos, e assim sempre melhorar o que já esta bom. tornando assim maravilhosamente bom```
+
 
 
