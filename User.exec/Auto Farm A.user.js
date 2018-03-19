@@ -1,3 +1,17 @@
+// ==UserScript==
+// @name        	AutoFarm A
+// @namespace   	https://www.youtube.com/c/TW100TRIBALWARS
+// @icon          https://media.innogamescdn.com/com_DS_FR/Quickbar/oldaxe.png
+// @website       https://tribalwarsbr100.wixsite.com/tw100
+// @email         tribalwarsbr100@gmail.com
+// @description 	Auto Farm Game Tribal Wars, Modelo A
+// @author		    Marcos v.s Marques
+// @include     	http*://*.tribalwars.*/game.php?*&screen=am_farm*
+// @version     	5.7
+// @updateURL		  https://github.com/tribalwarsbr100/AutoFarms/blob/master/Javascript/Auto%20Farm%20A.js
+// @downloadURL   https://github.com/tribalwarsbr100/AutoFarms/edit/master/User.exec/Auto%20Farm%20A.user.js
+// @supportURL    https://github.com/tribalwarsbr100/AutoFarms/issues
+// ==/UserScript==
 var atualizarPagina = 1;
 var tempo = 805;
 var x = 0;
