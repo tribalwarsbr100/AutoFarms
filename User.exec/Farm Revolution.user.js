@@ -6,10 +6,10 @@
 // @email               tribalwarsbr100@gmail.com
 // @description         Modelo Auto Farm Para Game Tribal Wars Tradicional, Painel Interativo, Mult Funções. 
 // @detailing           Desmembrado inumeros problemas criticos de funcionamento, Funcional em 80% - Infuncional em 20%
-// @version     	      0.0.1
-// @updateURL		        dfdf
-// @downloadURL         dfdf
-// @supportURL          dfdf
+// @version     	0.0.1
+// @updateURL		https://github.com/tribalwarsbr100/AutoFarms/blob/master/Javascript/Farm%20Revolution.js
+// @downloadURL         https://github.com/tribalwarsbr100/AutoFarms/raw/master/User.exec/Farm%20Revolution.user.js
+// @supportURL          https://github.com/tribalwarsbr100/AutoFarms/issues
 // @grant               GM_addStyle
 // @grant               GM_getValue
 // @grant               GM_setValue
