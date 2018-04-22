@@ -6,8 +6,8 @@
 // @email               tribalwarsbr100@gmail.com
 // @description         Modelo Auto Farm Para Game Tribal Wars Tradicional, Painel Interativo, Mult Funções. 
 // @detailing           Desmembrado inumeros problemas criticos de funcionamento, Funcional em 80% - Infuncional em 20%
-// @version     	0.0.1
-// @updateURL		https://github.com/tribalwarsbr100/AutoFarms/blob/master/Javascript/Farm%20Revolution.js
+// @version     	    0.0.1
+// @updateURL		    https://github.com/tribalwarsbr100/AutoFarms/blob/master/Javascript/Farm%20Revolution.js
 // @downloadURL         https://github.com/tribalwarsbr100/AutoFarms/raw/master/User.exec/Farm%20Revolution.user.js
 // @supportURL          https://github.com/tribalwarsbr100/AutoFarms/issues
 // @grant               GM_addStyle
@@ -15,8 +15,7 @@
 // @grant               GM_setValue
 // @grant               unsafeWindow
 // @grant               GM_getResourceText
-// @include             https://*screen=am_farm*       
-// ==/UserScript==
+// @include             https://*screen=am_farm*   
 
 /*	Changelog versão 1.25
 *        Equipe do Canal Youtube TW 100 Foi Realizado a Mais Recente Atualização Para Implatação da universalização do conteudo do canal, assim tornando nosso conteudo cada vez mais usual e presente em todos servidores de tribalwars.
