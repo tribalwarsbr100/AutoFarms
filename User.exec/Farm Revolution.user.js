@@ -16,6 +16,7 @@
 // @grant               unsafeWindow
 // @grant               GM_getResourceText
 // @include             https://*screen=am_farm*   
+// ==/UserScript==
 
 /*	Changelog versão 1.25
 *        Equipe do Canal Youtube TW 100 Foi Realizado a Mais Recente Atualização Para Implatação da universalização do conteudo do canal, assim tornando nosso conteudo cada vez mais usual e presente em todos servidores de tribalwars.
