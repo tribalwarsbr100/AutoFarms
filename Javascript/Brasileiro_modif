@@ -1,0 +1,192 @@
+var atacarExplorada = 1;
+var atualizarPagina = 1;
+var tempo = 950;
+var x = 0;
+var minhaVar = "";
+var remove_atacadas = 1;
+var menu = "";
+var horasTolerancia = 1;//tolerancia para usar o C
+ 
+var jaEnviados = $(menu).parent().parent().find('img.tooltip').length+"000";
+ 
+if(atualizarPagina == 1) {
+setInterval(function() {
+window.location.reload();
+}, 6000)
+}
+if (remove_atacadas == 1) {
+$('img').each(function() {
+var tempStr = $(this).attr('src');
+if (tempStr.indexOf('attack') != -1) {
+$(this).addClass('tooltip')
+}
+});
+}
+ 
+if(atualizarPagina == 1) {
+setInterval(function() {
+window.location.reload();
+}, 91222);
+}
+ 
+console.log("Ja existe " + jaEnviados.substring(0,(jaEnviados.length - 3)) + " aldeia com ataque.");
+ 
+var altAldTempo = 0;
+ 
+if (altAldTempo == "0") {
+var altAldTempo = aleatorio(5000,6000);
+} else {
+var altAldTempo = parseInt(altAldTempo) + parseInt(aleatorio(45200,14000));
+}
+ 
+console.log("Resta " + altAldTempo + " milesegundos para alternar a aldeia.");
+ 
+function aleatorio(superior,inferior) {
+numPosibilidades = superior - inferior
+aleat = Math.random() * numPosibilidades
+return Math.round(parseInt(inferior) + aleat)
+}
+ 
+var qtdLista = ($('#plunder_list tr').length -1) / 3;
+ 
+for (i = 0; i < qtdLista; i++) {
+//NOVO
+classLinha = $('#am_widget_Farm a.farm_icon_a').eq(i).parent().parent().attr('class').split(' ');
+arrHora = $('td',$('.'+classLinha)[1]).html().split(' às ');
+var dateHoje = new Date(new Date().getTime() - (horasTolerancia * 60 * 60 * 1000));//com mais 2 horas de tolerancia
+var dateComparacao = new Date(new Date().getTime());
+var dataAtaqueFinal = new Date(dateHoje.getFullYear()+'-'+dateHoje.getMonth()+'-'+dateHoje.getDate()+' '+arrHora[1]);
+dateComparacao.setHours(dataAtaqueFinal.getHours());
+dateComparacao.setMinutes(dataAtaqueFinal.getMinutes());
+dateComparacao.setSeconds(dataAtaqueFinal.getSeconds());
+ 
+if($('img[title="Explorado"]',$('td', $('.'+classLinha)[0])[0]).length == 0 || atacarExplorada ==1){
+if(!($('.farm_icon_c',$('td', $('.'+classLinha)[2])).hasClass('farm_icon_disabled')) && ($('.farm_icon_c',$('td', $('.'+classLinha)[2])).length >=1 && dateComparacao > dateHoje && $.trim(arrHora[0]) == 'hoje')){
+console.log('atacar C - '+classLinha[2]);
+menu = $('.farm_icon_c',$('td', $('.'+classLinha)[2]));
+}else{
+if($('.farm_icon_a',$('td', $('.'+classLinha)[2])).hasClass('farm_icon_disabled')){
+//console.log('Atacar B');
+menu = $('.farm_icon_b',$('td', $('.'+classLinha)[2]));
+}else{
+//console.log('Atacar A');
+menu = $('.farm_icon_a',$('td', $('.'+classLinha)[2]));
+}
+}
+ 
+$(menu).each(function() {
+if (!($(this).parent().parent().find('img.tooltip').length)) {
+var tempoAgora = (tempo * ++x) - aleatorio(150,300);
+setTimeout(function(minhaVar) {
+$(minhaVar).click();
+}, tempoAgora, this);
+}
+})
+}// ==UserScript==
+// @name Mundo73 - Lira Auto(A,B,C)
+// @include https://br73*screen=am_farm*
+// ==/UserScript==
+ 
+// falta duas regras: quando for entre 00 e e 1 da manha / quando nao tiver C
+ 
+var atacarExplorada = 0;
+var atualizarPagina = 1;
+var tempo = 950;
+var x = 0;
+var minhaVar = "";
+var remove_atacadas = 1;
+var menu = "";
+var horasTolerancia = 1;//tolerancia para usar o C
+ 
+var jaEnviados = $(menu).parent().parent().find('img.tooltip').length+"000";
+ 
+if(atualizarPagina == 1) {
+setInterval(function() {
+window.location.reload();
+}, 6000)
+}
+if (remove_atacadas == 1) {
+$('img').each(function() {
+var tempStr = $(this).attr('src');
+if (tempStr.indexOf('attack') != -1) {
+$(this).addClass('tooltip')
+}
+});
+}
+ 
+if(atualizarPagina == 1) {
+setInterval(function() {
+window.location.reload();
+}, 91222);
+}
+ 
+console.log("Ja existe " + jaEnviados.substring(0,(jaEnviados.length - 3)) + " aldeia com ataque.");
+ 
+var altAldTempo = 0;
+ 
+if (altAldTempo == "0") {
+var altAldTempo = aleatorio(5000,6000);
+} else {
+var altAldTempo = parseInt(altAldTempo) + parseInt(aleatorio(45200,14000));
+}
+ 
+console.log("Resta " + altAldTempo + " milesegundos para alternar a aldeia.");
+ 
+function aleatorio(superior,inferior) {
+numPosibilidades = superior - inferior
+aleat = Math.random() * numPosibilidades
+return Math.round(parseInt(inferior) + aleat)
+}
+ 
+var qtdLista = ($('#plunder_list tr').length -1) / 3;
+ 
+for (i = 0; i < qtdLista; i++) {
+//NOVO
+classLinha = $('#am_widget_Farm a.farm_icon_a').eq(i).parent().parent().attr('class').split(' ');
+arrHora = $('td',$('.'+classLinha)[1]).html().split(' às ');
+var dateHoje = new Date(new Date().getTime() - (horasTolerancia * 60 * 60 * 1000));//com mais 2 horas de tolerancia
+var dateComparacao = new Date(new Date().getTime());
+var dataAtaqueFinal = new Date(dateHoje.getFullYear()+'-'+dateHoje.getMonth()+'-'+dateHoje.getDate()+' '+arrHora[1]);
+dateComparacao.setHours(dataAtaqueFinal.getHours());
+dateComparacao.setMinutes(dataAtaqueFinal.getMinutes());
+dateComparacao.setSeconds(dataAtaqueFinal.getSeconds());
+ 
+if($('img[title="Explorado"]',$('td', $('.'+classLinha)[0])[0]).length == 0 || atacarExplorada ==1){
+if($('.farm_icon_c',$('td', $('.'+classLinha)[2])).length >=1 && dateComparacao > dateHoje && $.trim(arrHora[0]) == 'hoje'){
+console.log('atacar C - '+classLinha[2]);
+menu = $('.farm_icon_c',$('td', $('.'+classLinha)[2]));
+}else{
+if($('.farm_icon_a',$('td', $('.'+classLinha)[2])).hasClass('farm_icon_disabled')){
+//console.log('Atacar B');
+menu = $('.farm_icon_b',$('td', $('.'+classLinha)[2]));
+}else{
+//console.log('Atacar A');
+menu = $('.farm_icon_a',$('td', $('.'+classLinha)[2]));
+}
+}
+ 
+$(menu).each(function() {
+if (!($(this).parent().parent().find('img.tooltip').length)) {
+var tempoAgora = (tempo * ++x) - aleatorio(150,300);
+setTimeout(function(minhaVar) {
+$(minhaVar).click();
+}, tempoAgora, this);
+}
+})
+}
+}
+ 
+function altAldeia(){
+$('.arrowRight').click();
+$('.groupRight').click();
+}
+ 
+setInterval(altAldeia, altAldTempo);
+}
+ 
+function altAldeia(){
+$('.arrowRight').click();
+$('.groupRight').click();
+}
+ 
+setInterval(altAldeia, altAldTempo);
