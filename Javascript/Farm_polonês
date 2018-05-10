@@ -1,0 +1,593 @@
+(function (){$("a.farm_icon_c, a.farm_icon_b, a.farm_icon_a").click(function() {$(this).closest("tr").remove();});})();
+
+Array.prototype.clean = function(deleteValue) {
+  for (var i = 0; i < this.length; i++) {
+    if (this[i] == deleteValue) {         
+      this.splice(i, 1);
+      i--;
+    }
+  }
+  return this;
+};
+
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*60*60*1000));
+    var expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) === 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+var key = "B";
+var url = window.location.href;
+var arr = url.includes("screen=am_farm");
+var czyPremium = url.includes("mode=exchange");
+var czyHandel = false;
+if(url.includes("screen=market")&&url.includes("mode=send")) {
+var czyHandel = true;
+}
+if(arr===true){
+var doc=document;
+var lightA= parseInt(doc.forms[0].light.value);
+var lightB= parseInt(doc.forms[1].light.value);
+}
+var lightIndex = $("#units_home tr img[src*='unit_light']").parent().index();
+var lightValue = $('#units_home tr').eq(1).find('td').eq(lightIndex).text();
+var toStop = false;
+
+function clickAndHide(){
+    var $x = $('#am_widget_Farm .farm_icon_' + key.toLowerCase() + ':first');
+    $x.click();
+    $x.closest('tr').remove();
+}
+
+function clickCustomSend(){
+$('#plunder_list tr').eq(1).find('td').eq(11).children('a').children('img').click();
+ setTimeout(function(){ 
+
+    }, 2000);  
+}
+
+var i = 0, howManyTimes = 100, ile=0;
+var czyStrona = getCookie("czyNastepnaStrona");
+var ktoraWioska = parseInt(getCookie("ktoraWioska"));
+if(arr===true){
+if(getCookie("koniecWioski")=="tak"){
+     if(url.includes("Farm_page=")){
+        var pom=url.split(/Farm_page=[0-9]/i);
+        pom = url.split(pom[0]);
+        pom = pom[1].split("Farm_page=");
+        if(parseInt(pom[1])!==0){
+            var split1 = url.split("?");
+        var split2 = split1[1].split("&");
+        var nextPageFarm = "game.php?"+split2[0]+"&screen=am_farm&order=distance&dir=asc&Farm_page="+"0";
+        setCookie("koniecWioski","nie",5);
+        window.location.href= nextPageFarm;
+        }
+    }
+}
+
+if(czyStrona=="tak"){
+    key = getCookie("ktoryklawisz");
+    if(key=="B"){
+        howManyTimes = Math.round(lightValue/lightB);
+        f();
+    }
+    if(key=="A"){
+        howManyTimes = Math.round(lightValue/lightA);
+        f1();
+    }
+     if(key=="C"){
+        fC();
+    }
+   
+} else {
+if(ktoraWioska<=45){
+    key = getCookie("ktoryklawisz");
+    if(key=="B"){
+        howManyTimes = Math.round(lightValue/lightB);
+         f();
+    }
+    if(key=="A"){
+        howManyTimes = Math.round(lightValue/lightA);
+         f1();
+    }
+     if(key=="C"){
+        fC();
+    }
+  
+}
+}
+}
+
+var rowCount =0;
+
+var lupyfull = "https://dspl.innogamescdn.com/8.83/33149/graphic/max_loot/1.png";
+var atak = "https://dspl.innogamescdn.com/8.83/33149/graphic/command/attack.png";
+
+lupyfull=lupyfull.replace(/^.*[\\\/]/, '');
+atak=atak.replace(/^.*[\\\/]/, '');
+
+
+
+
+function f() {
+    if(toStop === true) { return }
+var keyPom= key;
+var dontAttack=false;
+ var lupy = $('#plunder_list tr').eq(1).find('td').eq(2).children('img').attr('src');
+ var czyAtak = $('#plunder_list tr').eq(1).find('td').eq(3).children('img').attr('src');
+var czyC = $('#plunder_list tr').eq(1).find('td').eq(10).children('a').attr('href');
+$('#plunder_list tr').eq(1).find('td').eq(3).children('img').trigger("mouseover");
+
+ var kordy = $('#plunder_list tr').eq(1).find('td').eq(3).text();
+kordy=kordy.replace(/\s+/g, '');
+var surki = $('#plunder_list tr').eq(1).find('td').eq(5).text();
+surki=surki.replace(/\./g, "");
+surki=surki.split(" ");
+surki=surki.clean("");
+var ileAtakow = $('#tooltip').find('h3').text();
+if(ileAtakow.includes("w drodze")){
+    ileAtakow.split(" ");
+    ileAtakow = parseInt(ileAtakow[0]);
+} else {
+  ileAtakow=0;    
+}
+ if(lupy!==undefined){
+     lupy=lupy.replace(/^.*[\\\/]/, '');
+ }
+if(czyAtak!==undefined){
+     czyAtak=czyAtak.replace(/^.*[\\\/]/, '');
+} else {
+    ileAtakow=0;
+}
+
+ lightValue = parseInt($('#units_home tr').eq(1).find('td').eq(lightIndex).text());
+   if(key=="B"){
+        howManyTimes = Math.round(lightValue/lightB);
+        i=0;
+    }
+    if(key=="A"){
+        howManyTimes = Math.round(lightValue/lightA);
+        i=0;
+    }
+
+if(lupy==lupyfull){
+if(atak == czyAtak){
+    if(czyC == "#"){
+         godziny = $('#plunder_list tr').eq(1).find('td').eq(4).text();
+ dzien = godziny.split(" ");
+dzien=dzien[0];
+godziny=godziny.split(" ");
+godziny=godziny[2].split(":");
+godziny=godziny[0];
+var data = new Date();
+if(data.getHours()-3<godziny&&dzien=="dzisiaj"){
+        if(parseInt(surki[1])>700||parseInt(surki[2])>700||parseInt(surki[3])>700){
+            if(getCookie("WioskiC").includes(kordy)) {
+                keyPom = key;
+              key = "A";
+            } else {
+                   var cos = getCookie("WioskiC");
+                   setCookie("WioskiC",cos+" "+kordy,5);
+                  keyPom = key;
+                  key = "C";
+            }
+
+         } else {
+             
+              keyPom = key;
+              key = "A";
+         }
+}
+    }else {
+         keyPom = key;
+         key = "A";
+    }
+} else {
+if(czyC == "#"){
+    
+ godziny = $('#plunder_list tr').eq(1).find('td').eq(4).text();
+ dzien = godziny.split(" ");
+dzien=dzien[0];
+godziny=godziny.split(" ");
+godziny=godziny[2].split(":");
+godziny=godziny[0];
+ data = new Date();
+if(data.getHours()-3<godziny&&dzien=="dzisiaj"){
+
+              if(getCookie("WioskiC")===""){
+                setCookie("WioskiC",kordy,5);
+               } else {
+                      var wioskiC = getCookie("WioskiC");
+                      wioskiC=wioskiC.split(" ");
+              for(i=0; wioskiC.length>i;i++){
+                  if(wioskiC[i].includes(kordy)){
+                      wioskiC[i] = "";
+                  }
+              }
+              var wioski= "";
+               for(i=0; wioskiC.length>i;i++){
+			if(wioskiC[i]!==""){
+                   wioski+=" "+wioskiC[i];
+                            }
+               }
+             setCookie("WioskiC",wioski+" "+kordy,5);
+               } 
+    keyPom = key;
+    key = "C";
+} else {
+  keyPom= key;
+  key="A";
+}
+} else {
+ keyPom = key;
+  key = "A";
+}
+}
+} else {
+    if(atak == czyAtak){} else {
+        if(czyC == "#"){
+        godziny = $('#plunder_list tr').eq(1).find('td').eq(4).text();
+ dzien = godziny.split(" ");
+dzien=dzien[0];
+godziny=godziny.split(" ");
+godziny=godziny[2].split(":");
+godziny=godziny[0];
+var data = new Date();
+if(data.getHours()-3<godziny&&dzien=="dzisiaj"){
+        keyPom = key;
+    key = "C";
+}
+}
+    }
+}
+if(ileAtakow<3||key=="A"||key=="C"){
+   clickAndHide();
+} else {
+    $('#plunder_list tr').eq(1).remove();
+}
+key=keyPom;
+    ile++;
+    rowCount= $("#plunder_list tr").length;
+    if(rowCount<=1){
+        setCookie("czyNastepnaStrona","tak",5);
+        setCookie("koniecWioski","nie",5);
+        var strona = parseInt(getCookie("ktoraStrona"));
+        strona+=1;
+        setCookie("ktoraStrona",strona,5);
+        var url = window.location.href;
+        var split1 = url.split("?");
+        var split2 = split1[1].split("&");
+        var nextPageFarm =  "game.php?"+split2[0]+"&screen=am_farm&order=distance&dir=asc&Farm_page="+strona;
+        window.location.href= nextPageFarm;
+        return;
+    }
+    if( parseInt($('#units_home tr').eq(1).find('td').eq(lightIndex).text())>=4 ){
+        setTimeout( f, Math.random() * 80 + 266+(Math.floor((Math.random() * 300) + 1)));
+    } else{
+        
+setCookie("czyNastepnaStrona","nie",5);
+setCookie("ktoraStrona","0",5);
+setCookie("koniecWioski","tak",5);
+setCookie("ktoraWioska",parseInt(getCookie("ktoraWioska"))+1,5);
+var c = jQuery.Event("keydown");
+c.which = 68; // # Some key code value
+$("input").trigger(c);
+    }
+}
+
+function fC() {
+    if(toStop === true) { return }
+  
+   var keyPom = key;
+    rowCount= $("#plunder_list tr").length;
+    var czyC = $('#plunder_list tr').eq(1).find('td').eq(10).children('a').attr('href');
+    if(czyC == "#"){
+        var godziny = $('#plunder_list tr').eq(1).find('td').eq(4).text();
+var dzien = godziny.split(" ");
+dzien=dzien[0]
+godziny=godziny.split(" ");
+godziny=godziny[2].split(":");
+godziny=godziny[0];
+var data = new Date();
+if(data.getHours()-3<godziny&&dzien=="dzisiaj"){
+         key ="C";
+} else {
+        keyPom = key;
+        key = "A";
+}
+    } else {
+        keyPom = key;
+        key = "A";
+    }
+    
+     clickAndHide();
+     i++;
+     key= keyPom;
+    if(rowCount<=1){
+        setCookie("czyNastepnaStrona","tak",5);
+        setCookie("koniecWioski","nie",5);
+        var strona = parseInt(getCookie("ktoraStrona"));
+        strona+=1;
+        setCookie("ktoraStrona",strona,5);
+        var url = window.location.href;
+        var split1 = url.split("?");
+        var split2 = split1[1].split("&");
+        var nextPageFarm =  "game.php?"+split2[0]+"&screen=am_farm&order=distance&dir=asc&Farm_page="+strona;
+        window.location.href= nextPageFarm;
+        return;
+    }
+    if( parseInt($('#units_home tr').eq(1).find('td').eq(lightIndex).text())>=10 ){
+        setTimeout( fC, Math.random() * 80 + 266+(Math.floor((Math.random() * 300) + 1)));
+    } else{
+       
+setCookie("czyNastepnaStrona","nie",5);
+setCookie("ktoraStrona","0",5);
+setCookie("koniecWioski","tak",5);
+setCookie("ktoraWioska",parseInt(getCookie("ktoraWioska"))+1,5);
+var c = jQuery.Event("keydown");
+c.which = 68; // # Some key code value
+$("input").trigger(c);
+    }
+}
+ 
+
+function f1() {
+    if(toStop === true) { return }
+   clickAndHide();
+    i++;
+    rowCount= $("#plunder_list tr").length;
+    if(rowCount<=1){
+        setCookie("czyNastepnaStrona","tak",5);
+        setCookie("koniecWioski","nie",5);
+        var strona = parseInt(getCookie("ktoraStrona"));
+        strona+=1;
+        setCookie("ktoraStrona",strona,5);
+        var url = window.location.href;
+        var split1 = url.split("?");
+        var split2 = split1[1].split("&");
+        var nextPageFarm =  "game.php?"+split2[0]+"&screen=am_farm&order=distance&dir=asc&Farm_page="+strona;
+        window.location.href= nextPageFarm;
+        return;
+    }
+    if( parseInt($('#units_home tr').eq(1).find('td').eq(lightIndex).text())>=10 ){
+        setTimeout( f1, Math.random() * 80 + 266 );
+    } else{
+       
+setCookie("czyNastepnaStrona","nie",5);
+setCookie("ktoraStrona","0",5);
+setCookie("koniecWioski","tak",5);
+setCookie("ktoraWioska",parseInt(getCookie("ktoraWioska"))+1,5);
+var c = jQuery.Event("keydown");
+c.which = 68; // # Some key code value
+$("input").trigger(c);
+    }
+}
+
+ 
+ 
+ 
+ 
+ 
+$(document).keydown(function(e) {
+    if(arr===true){
+if(e.keyCode == 'W'.charCodeAt(0)){
+    key = "B";
+    if(url.includes("Farm_page=")){
+        var pom=url.split(/Farm_page=[0-9]/i);
+        pom = url.split(pom[0]);
+        pom = pom[1].split("Farm_page=");
+        console.log(pom[1]);
+        setCookie("ktoraStrona",pom[1],5);
+    }else {
+           setCookie("ktoraStrona","0",5); 
+    }
+    setCookie("koniecWioski","nie",5);
+    setCookie("ktoryklawisz","B",5);
+    setCookie("ktoraWioska","1",5);
+    setCookie("czyNastepnaStrona","nie",5);
+lightIndex = $("#units_home tr img[src*='unit_light']").parent().index();
+lightValue = $('#units_home tr').eq(1).find('td').eq(lightIndex).text();
+howManyTimes = Math.round(lightValue/lightB);
+i=0;
+toStop = false;  
+f();
+}
+if(e.keyCode == 'G'.charCodeAt(0)){
+toStop = true;
+setCookie("czyNastepnaStrona","nie",5);
+setCookie("ktoraWioska","100",5);
+}
+if(e.keyCode == 'H'.charCodeAt(0)){    
+    key = "A";
+    if(url.includes("Farm_page=")){
+        var pom=url.split(/Farm_page=[0-9]/i);
+        pom = url.split(pom[0]);
+        pom = pom[1].split("Farm_page=");
+        console.log(pom[1]);
+        setCookie("ktoraStrona",pom[1],5);
+    }else {
+           setCookie("ktoraStrona","0",5); 
+    }
+    setCookie("koniecWioski","nie",5);
+    setCookie("ktoryklawisz","A",5);
+    setCookie("ktoraWioska","1",5);
+    setCookie("czyNastepnaStrona","nie",5);
+lightIndex = $("#units_home tr img[src*='unit_light']").parent().index();
+lightValue = $('#units_home tr').eq(1).find('td').eq(lightIndex).text();
+howManyTimes = Math.round(lightValue/lightA);
+i=0;
+toStop = false;  
+f1();
+}
+
+if(e.keyCode == 'Z'.charCodeAt(0)){    
+    key = "C";
+    if(url.includes("Farm_page=")){
+        var pom=url.split(/Farm_page=[0-9]/i);
+        pom = url.split(pom[0]);
+        pom = pom[1].split("Farm_page=");
+        console.log(pom[1]);
+        setCookie("ktoraStrona",pom[1],5);
+    }else {
+           setCookie("ktoraStrona","0",5); 
+    }
+    setCookie("koniecWioski","nie",5);
+    setCookie("ktoryklawisz","C",5);
+    setCookie("ktoraWioska","1",5);
+    setCookie("czyNastepnaStrona","nie",5);
+lightIndex = $("#units_home tr img[src*='unit_light']").parent().index();
+lightValue = $('#units_home tr').eq(1).find('td').eq(lightIndex).text();
+howManyTimes = Math.round(lightValue/lightA);
+i=0;
+toStop = false;  
+fC();
+}
+
+ if(e.keyCode == '3'.charCodeAt(0)){
+function sendRams(){
+
+ setTimeout(function(){ 
+ $('#troop_confirm_go').click();
+    }, 1000); 
+   $('#unit_input_axe').val(135);
+$('#unit_input_spy').val(1);
+$('#unit_input_ram').val(8);
+$('#target_attack').click();
+}
+
+sendRams();
+}
+ if(e.keyCode == '4'.charCodeAt(0)){
+function sendRamsWithLK(){
+
+ setTimeout(function(){ 
+ $('#troop_confirm_go').click();
+    }, 1000); 
+   $('#unit_input_light').val(7);
+$('#unit_input_spy').val(1);
+$('#unit_input_ram').val(8);
+$('#target_attack').click();
+}
+
+sendRamsWithLK();
+}
+
+
+}
+
+if(czyHandel===true){
+      if(e.keyCode == 'W'.charCodeAt(0)){
+        var maxTransport = parseInt($("#market_merchant_max_transport").text());
+        var doc=document;
+          doc.forms[0].wood.value=maxTransport/3;
+          doc.forms[0].stone.value=maxTransport/3;
+          doc.forms[0].iron.value=maxTransport/3;
+          doc.forms[0].x.value="689";
+          doc.forms[0].y.value="669";
+      }
+}
+
+if(czyPremium===true){
+    
+    if(e.keyCode == 'W'.charCodeAt(0)){
+        var doc=document;
+i=0;
+var spichlerzD = parseInt($('#wood').text());
+var spichlerzG = parseInt($('#stone').text());
+var spichlerzZ = parseInt($('#iron').text());
+
+var kupcy = parseInt($('#market_merchant_available_count').text());
+var kupcyD=0;
+var kupcyG=0;
+var kupcyZ=0;
+
+var stanD = parseInt($('#premium_exchange_stock_wood').text());
+var stanG = parseInt($('#premium_exchange_stock_stone').text());
+var stanZ = parseInt($('#premium_exchange_stock_iron').text());
+var pojD = parseInt($('#premium_exchange_capacity_wood').text());
+var pojG = parseInt($('#premium_exchange_capacity_stone').text());
+var pojZ = parseInt($('#premium_exchange_capacity_iron').text());
+
+
+var a= $('#premium_exchange_rate_wood').text();
+var b= $('#premium_exchange_rate_stone').text();
+var c= $('#premium_exchange_rate_iron').text();
+a.split(" ");
+b.split(" ");
+c.split(" ");
+var kursD = a[22]+a[23]+a[24];
+var kursG = b[22]+b[23]+b[24];
+var kursZ = c[22]+c[23]+c[24];
+if(a[25]!==""){
+kursD +=a[25];
+}
+if(a[25]!==""){
+kursG +=b[25];
+}
+if(a[25]!==""){
+kursZ +=c[25];
+}
+kupcy=parseInt(kupcy);
+kursD=parseInt(kursD);
+kursG=parseInt(kursG);
+kursZ=parseInt(kursZ);
+
+
+var ileD = 0;
+var ileG = 0;
+var ileZ = 0;
+for(i=0;i<100;i++){
+if(Math.ceil(kupcyD/1000)<kupcy && kupcy!==0){
+   if((pojD-stanD)>=kursD){
+	if(spichlerzD>kupcyD){
+	ileD+=1;
+	stanD+=kursD+50;
+	kupcyD+=kursD;
+   }}}
+}
+
+
+for(i=0;i<100;i++){
+if(Math.ceil(kupcyG/1000)<kupcy && kupcy!==0){
+   if((pojG-stanG)>=kursG){
+	if(spichlerzG>kupcyG){
+	ileG+=1;
+	stanG+=kursG+50;
+	kupcyG+=kursG;
+   }}}
+}
+
+
+for(i=0;i<100;i++){
+if(Math.ceil(kupcyZ/1000)<kupcy && kupcy!==0){
+   if((pojZ-stanZ)>=kursZ){
+	if(spichlerzZ>kupcyZ){
+	ileZ+=1;
+	stanZ+=kursZ+50;
+	kupcyZ+=kursZ;
+   }}}
+}
+
+
+doc.forms[0].sell_wood.value=kupcyD;
+doc.forms[0].sell_stone.value=kupcyG;
+doc.forms[0].sell_iron.value=kupcyZ;
+    }
+}
+});
