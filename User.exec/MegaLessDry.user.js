@@ -6,9 +6,12 @@
 // @website             https://tribalwarsbr100.wixsite.com/tw100
 // @description         Autofarm, modelo de auto farm com bases em modelo lessdry, mas dessa vez, melhorado.
 // @copyright           2019, Tribalwarsbr100 (https://openuserjs.org/users/Tribalwarsbr100)
+// @downloadURL         https://github.com/tribalwarsbr100/AutoFarms/raw/master/User.exec/MegaLessDry.user.js
+// @supportURL          https://github.com/tribalwarsbr100/AutoFarms/issues
 // @license             OSI-SPDX-Short-Identifier
 // @version             0.0.6
 // @include             https://*screen=am_farm*
+
 // @grant none
 // ==/UserScript==
 
